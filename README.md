@@ -20,3 +20,11 @@ Unlike Arduino, Raspberry Pi has a general-purpose operating system, that is ins
 And how about programming the GPIO controller, that I mentioned earlier? That is easy, because the most common programming languages like Python, Java, C#, C++, C or even JavaScript have libraries for that. 
 
 Now that you have at least a brief understanding of Raspberry Pi, let's start with the project.
+
+## Wiring the BMP280
+First of all, we need to connect the temperature sensor to the Raspberry Pi. For that we could use either the I2C or the SPI protocol. Now, how these two work, that is quite complicated and definitely far behind the scope of this video, so I won't explain it now and I will just tell you that we are going to use the I2C protocol, that will take care of all the data transferring between sensor and Raspberry Pi.
+
+The wiring s quite simple, we need just 4 cables for that. The first one, red, provides 3.3 V that powers the sensor. Data between Raspberry Pi and sensor are exchanged through that blue cable. Orange cable is for clock, that we use to synchronize both devices and finally black cable is ground. The 3 unused pins on temperature sensor are for SPI protocol, which is the other protocol I mentioned earlier. 
+![Wiring schema](https://github.com/hendrychjan/valt-rpi/blob/58ab1f2aba4dae0022ddf2c538f6615df13636ca/wiring.png)
+So, pause the video, connect the cables exactly the same as the diagram shows and also - pay attention not to have the Raspberry PI upside down - that means that the ethernet and USB ports must be on the bottom - otherwise cables would be connected wrong. 
+
